@@ -32,10 +32,10 @@ MODEL_TIMEOUT_SECONDS=30
 
 ```bash
 cd agent-course
-python -m src.client "用一句话介绍你自己"
+python3 -m src.client "用一句话介绍你自己"
 ```
 
-不写句子时，默认就是这句提示。标准输出只有模型回复。
+不写句子时，默认就是这句提示。标准输出只有模型回复。如果本机的 `python` 已经指向 3.11 或更高版本，可以把命令里的 `python3` 换成 `python`。
 
 ## 失败时会看到什么
 
@@ -52,7 +52,7 @@ Week 0 的自动检查不访问真实模型，只覆盖成功解析、错误密�
 
 ```bash
 cd agent-course
-python -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -v
 ```
 
 真实调用要等 `.env` 填好密钥后再执行上面的运行命令。

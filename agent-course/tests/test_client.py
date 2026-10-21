@@ -89,7 +89,7 @@ class ClientTests(unittest.TestCase):
     def test_help(self) -> None:
         result = run_client(["--help"], {})
         self.assertEqual(result.returncode, 0)
-        self.assertIn("python -m src.client", result.stdout)
+        self.assertIn("python3 -m src.client", result.stdout)
 
     def test_missing_key(self) -> None:
         result = run_client(["你好"], {})
@@ -176,7 +176,7 @@ class ClientTests(unittest.TestCase):
         self.assertIn("MODEL_API_KEY=", text)
         self.assertNotIn("sk-", text)
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertIn('python -m src.client "用一句话介绍你自己"', readme)
+        self.assertIn('python3 -m src.client "用一句话介绍你自己"', readme)
 
 
 if __name__ == "__main__":

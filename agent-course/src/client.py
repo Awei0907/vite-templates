@@ -17,7 +17,7 @@ from pathlib import Path
 
 HELP = """\
 用法：
-  python -m src.client "用一句话介绍你自己"
+  python3 -m src.client "用一句话介绍你自己"
 
 从环境变量或当前目录的 .env 读取：
   MODEL_API_KEY          必填
